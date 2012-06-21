@@ -84,9 +84,6 @@
         /// </summary>
         public Command AddReport { get; private set; }
 
-        // TODO: Move code below to constructor
-        
-        // TODO: Move code above to constructor
 
         /// <summary>
         /// Method to check whether the name command can be executed.
