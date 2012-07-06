@@ -144,13 +144,9 @@ namespace TestGenericFileTransfer
         [DeploymentItem("GenericFileTransfer2.exe")]
         public void AddReportTest()
         {
-            MainWindowViewModel_Accessor target = new MainWindowViewModel_Accessor(); // TODO: Initialize to an appropriate value
-            Command expected = null; // TODO: Initialize to an appropriate value
-            Command actual;
-            target.AddReport = expected;
-            actual = target.AddReport;
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            MainWindowViewModel_Accessor target = new MainWindowViewModel_Accessor();
+            Assert.IsNotNull(target.AddReport);
+            Assert.IsInstanceOfType(target.AddReport,typeof(Command));
         }
 
         /// <summary>
@@ -159,13 +155,12 @@ namespace TestGenericFileTransfer
         [TestMethod()]
         public void CurrentViewModelTest()
         {
-            MainWindowViewModel target = new MainWindowViewModel(); // TODO: Initialize to an appropriate value
-            ViewModelBase expected = null; // TODO: Initialize to an appropriate value
+            MainWindowViewModel target = new MainWindowViewModel(); 
+            ViewModelBase expected = new ReportViewModel(); 
             ViewModelBase actual;
             target.CurrentViewModel = expected;
             actual = target.CurrentViewModel;
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
         }
 
         /// <summary>
@@ -175,13 +170,9 @@ namespace TestGenericFileTransfer
         [DeploymentItem("GenericFileTransfer2.exe")]
         public void HomeViewCommandTest()
         {
-            MainWindowViewModel_Accessor target = new MainWindowViewModel_Accessor(); // TODO: Initialize to an appropriate value
-            Command expected = null; // TODO: Initialize to an appropriate value
-            Command actual;
-            target.HomeViewCommand = expected;
-            actual = target.HomeViewCommand;
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            MainWindowViewModel_Accessor target = new MainWindowViewModel_Accessor();
+            Assert.IsNotNull(target.HomeViewCommand);
+            Assert.IsInstanceOfType(target.HomeViewCommand, typeof(Command));
         }
     }
 }
